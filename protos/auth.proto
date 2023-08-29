@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service Auth {
+  rpc IntrospectToken (IntrospectTokenReq) returns (IntrospectTokenRes) {}
+}
+
+message IntrospectTokenReq {
+  string token = 1;
+}
+
+message IntrospectTokenRes {
+  uint32 userId = 1;
+}

@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service Recipes {
+  rpc Find (FindReq) returns (FindRes) {}
+}
+
+message FindReq {
+  uint32 id = 1;
+}
+
+message FindRes {
+  uint32 id = 1;
+  string title = 2;
+  string notes = 3;
+}
